@@ -1,4 +1,5 @@
 Wu Yuan, 72510535, Wuyyyyyyyyyy
+Zhang Shangze 72510154 Stefanie781
 def is_win(game):
     win = False
     # Check rows
@@ -53,11 +54,6 @@ def main():
             game[i][j] = 'X'
         else:
             game[i][j] = 'O'
-        if is_win(game):
-            print("Win!")
-            break  # Terminate the game
-        if n == 8:  # All cells have been filled
-            print("Tie!")
         #改进：正确的游戏结束逻辑
         winner = get_winner(board)
         if winner:
