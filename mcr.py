@@ -20,8 +20,7 @@ def is_win(game):
         win = True
     if game[0][2] == game[1][1] == game[2][0] and (game[0][2] == 'X' or game[0][2] == 'O'):
         win = True
-    return win#test
-
+    return win
 # test1?
 def main():
     game = [[' ' for _ in range(3)] for _ in range(3)]  # Tic-tac-toe board
@@ -59,6 +58,14 @@ def main():
             break  # Terminate the game
         if n == 8:  # All cells have been filled
             print("Tie!")
+        #改进：正确的游戏结束逻辑
+        winner = get_winner(board)
+        if winner:
+        print(f"玩家 {winner} 获胜！")
+        break
+        if is_board_full(board):
+        print("平局！")
+        break
         # Show the game board
         for row in game:
             print(" ".join(row))
