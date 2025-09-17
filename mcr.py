@@ -31,6 +31,7 @@ def main():
     for n in range(9):
         turn = not turn  # Switch turns
         if not turn:
+            #
             print("Player 1: ", end="")
         else:
             print("Player 2: ", end="")
