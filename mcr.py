@@ -1,7 +1,7 @@
 # Wu Yuan, 72510535, Wuyyyyyyyyyy
 # Zhang Shangze 72510154 Stefanie781
 # Guanning Feng , 72510049 , Lemon0x457
-#  
+#  gong ruifeng,72510824,greaft5
 def is_win(game):
     win = False
     # Check rows
