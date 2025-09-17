@@ -34,7 +34,9 @@ def main():
             print("Player 1: ", end="")
         else:
             print("Player 2: ", end="")
+        #这里需要修改
         print("Which cell to mark? i:[1..3], j:[1..3]: ")
+        
         i, j = map(int, input().split())
         i -= 1
         j -= 1
