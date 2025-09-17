@@ -1,3 +1,4 @@
+Wu Yuan, 72510535, Wuyyyyyyyyyy
 def is_win(game):
     win = False
     # Check rows
