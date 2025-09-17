@@ -38,6 +38,15 @@ def main():
             print("Player 2: ", end="")
         print("Which cell to mark? i:[1..3], j:[1..3]: ")
         i, j = map(int, input().split())
+        #这里需要添加异常处理
+        
+        try:
+            i, j = int(i, j)
+        except ValueError:
+            print("请输入有效的数字。")
+        except KeyboardInterrupt:
+            print("\n游戏被用户中断。")
+            exit()
         i -= 1
         j -= 1
         if not turn:
