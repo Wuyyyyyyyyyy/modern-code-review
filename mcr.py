@@ -1,4 +1,5 @@
 Wu Yuan, 72510535, Wuyyyyyyyyyy
+Gong Ruifeng,72510824,greaft5
 def is_win(game):
     win = False
     # Check rows
@@ -37,16 +38,23 @@ def main():
         else:
             print("Player 2: ", end="")
         print("Which cell to mark? i:[1..3], j:[1..3]: ")
-        i, j = map(int, input().split())
-        #这里需要添加异常处理
+        #i, j = map(int, input().split())
+        #这里需要添加输入异常处理
+        while True:
+            try:
+                parts = input("请输入两个整数，用空格分隔：").split()
+                if len(parts) != 2:                       # ① 个数不对
+                    raise ValueError
+                if i <= 0 or j <= 0:
+                    raise ValueError
+                i, j = map(int, parts)                    # ② 非整数会抛 ValueError
+                break                                     # ③ 全部通过，跳出循环
+            except ValueError:
+                print("输入格式错误！必须恰好是两个整数，用空格分隔。")
+            except KeyboardInterrupt:                     # Ctrl-C 退出
+                print("\n程序被用户中断。")
+                exit()
         
-        try:
-            i, j = int(i, j)
-        except ValueError:
-            print("请输入有效的数字。")
-        except KeyboardInterrupt:
-            print("\n游戏被用户中断。")
-            exit()
         i -= 1
         j -= 1
         if not turn:
