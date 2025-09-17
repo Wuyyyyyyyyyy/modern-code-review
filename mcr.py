@@ -21,7 +21,7 @@ def is_win(game):
     if game[0][2] == game[1][1] == game[2][0] and (game[0][2] == 'X' or game[0][2] == 'O'):
         win = True
     return win
-# test1?
+# test1??
 def main():
     game = [[' ' for _ in range(3)] for _ in range(3)]  # Tic-tac-toe board
     player1 = 'X'
