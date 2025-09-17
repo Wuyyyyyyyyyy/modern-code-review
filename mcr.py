@@ -21,6 +21,7 @@ def is_win(game):
         win = True
     return win
 
+# test1?
 def main():
     game = [[' ' for _ in range(3)] for _ in range(3)]  # Tic-tac-toe board
     player1 = 'X'
